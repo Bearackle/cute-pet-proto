@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package api.v1.user;
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true; 
+option java_package = "com.dinhhuan.api.v1.user"; 
+option java_outer_classname = "UserProto";
+
+service UserGrpcService {
+  rpc getUserProfile(GetUserByIdRequest) returns (GetUserByIdResponse);
+}
+
+message GetUserByIdRequest {
+  string user_id = 1;
+}
+
+message GetUserByIdResponse{
+    string id = 1;
+    string email = 2;
+    string username = 3;
+    string full_name = 4;
+    string about = 5;
+    string phone = 6;
+    string avatar = 7;
+    string background = 8;
+    string location = 9;
+    string website = 10;
+    google.protobuf.Timestamp join_date = 11;
+}
