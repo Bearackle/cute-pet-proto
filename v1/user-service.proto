@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package genproto.generated;
+package dinhhuan.genproto.generated;
 import "google/protobuf/timestamp.proto";
 
 option java_multiple_files = true; 
-option java_package = "genproto.generated"; 
+option java_package = "dinhhuan.genproto.generated"; 
 option java_outer_classname = "UserProto";
 
 service UserGrpcService {
